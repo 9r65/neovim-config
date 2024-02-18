@@ -18,8 +18,8 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 keymap({"n", "v"}, "<leader>z", "<cmd>lua require'telescope.builtin'.treesitter()<CR>", opts)
-keymap({"n", "v"}, "<leader>F", "<cmd>Telescope find_files<CR>", opts)
-keymap({"n", "v"}, "<leader>b", "<cmd>Telescope buffers<CR>", opts)
+keymap({"n", "v"}, "<leader>F", "<cmd>lua require'telescope.builtin'.find_files()<CR>", opts)
+keymap({"n", "v"}, "<leader>b", "<cmd>lua require'telescope.builtin'.buffers()<CR>", opts)
 keymap({"n", "v"}, "<leader>B", "<cmd>History<CR>", opts)
 
 -- nvim-tree
@@ -28,7 +28,7 @@ keymap({"n", "v"}, "<C-f>", "<cmd>NvimTreeFindFileToggle<CR>", opts)
 
 -- telescope for lsp
 keymap({"n", "v"}, "<leader>lq", "<cmd>TroubleToggle<CR>", opts)
-keymap({"n", "v"}, "<leader>ag", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", opts)
+keymap({"n", "v"}, "<leader>ag", "<cmd>lua require'telescope.builtin'.live_grep()<CR>", opts)
 keymap({"n", "v"}, "gd", "<cmd>lua require'telescope.builtin'.lsp_definitions()<CR>", opts)
 keymap({"n", "v"}, "gi", "<cmd>lua require'telescope.builtin'.lsp_implementations()<CR>", opts)
 keymap({"n", "v"}, "gr", "<cmd>lua require'telescope.builtin'.lsp_references()<CR>", opts)
