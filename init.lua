@@ -5,10 +5,8 @@ vim.g.maplocalleader = ';'
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- config neovide font
-
-
-vim.o.guifont = "FiraMono_Nerd_Font_Mono:h14" -- text below applies for VimScript
+-- config neovide
+require "neovide"
 
 require "plugin"
 require "options"

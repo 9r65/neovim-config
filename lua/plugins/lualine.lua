@@ -163,7 +163,7 @@ lualine.setup({
             left = '',
             right = ''
         },
-        theme = 'onedark'
+         --theme = 'onedark'
        -- theme = {
        --     normal = {
        --         c = {

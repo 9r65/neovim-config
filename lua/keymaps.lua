@@ -20,6 +20,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap({"n", "v"}, "<leader>z", "<cmd>lua require'telescope.builtin'.treesitter()<CR>", opts)
 keymap({"n", "v"}, "<leader>F", "<cmd>lua require'telescope.builtin'.find_files()<CR>", opts)
 keymap({"n", "v"}, "<leader>b", "<cmd>lua require'telescope.builtin'.buffers()<CR>", opts)
+keymap({"n", "v"}, "<leader>tp", "<cmd>lua require'telescope'.extensions.project.project{ display_type = 'full' }<CR>", opts)
 keymap({"n", "v"}, "<leader>B", "<cmd>History<CR>", opts)
 
 -- nvim-tree

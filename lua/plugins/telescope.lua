@@ -4,6 +4,8 @@ if not status_ok then
 end
 
 
+local project_actions = require("telescope._extensions.project.actions")
+
 telescope.setup {
     pickers={
         find_files = {
@@ -49,8 +51,19 @@ telescope.setup {
             override_generic_sorter = true,
             override_file_sorter = true,
             case_mode = "smart_case"
-        }
+        },
+        project = {
+            theme = "dropdown",
+            order_by = "asc",
+            search_by = "title",
+            sync_with_nvim_tree = true,
+            on_project_selected = function(prompt_bufnr)
+            project_actions.change_working_directory(prompt_bufnr, false)
+                --require("harpoon.ui").nav_file(1)
+            end
+        },
     }
 }
 
 require('telescope').load_extension('fzf')
+require('telescope').load_extension('project')

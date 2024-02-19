@@ -33,7 +33,7 @@ require("lazy").setup({{
     dependencies = {{'nvim-lua/plenary.nvim'}, {
         'nvim-telescope/telescope-fzf-native.nvim',
         build = 'make'
-    }}
+    },{'nvim-telescope/telescope-project.nvim'}}
 }, {
     'akinsho/bufferline.nvim',
     version = "*",
