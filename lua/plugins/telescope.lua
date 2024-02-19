@@ -4,8 +4,6 @@ if not status_ok then
 end
 
 
-local project_actions = require("telescope._extensions.project.actions")
-
 telescope.setup {
     pickers={
         find_files = {
@@ -57,10 +55,6 @@ telescope.setup {
             order_by = "asc",
             search_by = "title",
             sync_with_nvim_tree = true,
-            on_project_selected = function(prompt_bufnr)
-            project_actions.change_working_directory(prompt_bufnr, false)
-                --require("harpoon.ui").nav_file(1)
-            end
         },
     }
 }
