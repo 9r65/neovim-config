@@ -35,7 +35,7 @@ keymap({"n", "v"}, "gi", "<cmd>lua require'telescope.builtin'.lsp_implementation
 keymap({"n", "v"}, "gr", "<cmd>lua require'telescope.builtin'.lsp_references()<CR>", opts)
 
 -- terminal
-keymap({"n", "v"}, "<leader>tt", "<cmd>ToggleTerm direction=float<CR>", opts)
+keymap({"n", "v"}, "<leader>tt", "<cmd>ToggleTerm<CR>", opts)
 keymap("n", "<leader>gg", "<cmd>lua _GITUI_TOGGLE()<CR>", opts)
 
 -- navigate buffers
